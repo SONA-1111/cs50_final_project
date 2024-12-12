@@ -1,6 +1,6 @@
 # Academic Achievement Tracker  
 #### Video Demo: [URL HERE]  
-#### Description:  
+#### Description:
 
 The **Academic Achievement Tracker** is a comprehensive project designed to streamline academic management processes. This application integrates user registration, course management, student tracking, and result handling into a cohesive and user-friendly system. It features a robust database for secure data storage and multi-window navigation for enhanced usability.  
 
