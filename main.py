@@ -53,7 +53,7 @@ class StuManagement :
        
        #details
     def update_details(self):
-        con=sqlite3.connect(database="cs50_final_project.db")
+        con=sqlite3.connect(database="project.db")
         cur=con.cursor()
         try:
             cur.execute("select * from course ")

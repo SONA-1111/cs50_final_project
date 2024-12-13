@@ -160,7 +160,7 @@ class studentClass :
         
 # delete function
     def delete(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
           if self.var_roll.get()=="":
@@ -206,7 +206,7 @@ class studentClass :
 #add function
 
     def add(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
           if self.var_roll.get()=="":
@@ -241,7 +241,7 @@ class studentClass :
 
 
     def update(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
           if self.var_roll.get()=="":
@@ -282,7 +282,7 @@ class studentClass :
 #show function
 
     def show(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
               cur.execute("select * from student ")
@@ -297,7 +297,7 @@ class studentClass :
 #fetch course
 
     def fetch_course(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
         cur.execute("select name from course ")
@@ -312,7 +312,7 @@ class studentClass :
 #search
 
     def search(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
               cur.execute(f"select * from student where roll=?",(self.var_search.get(),))

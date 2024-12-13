@@ -54,7 +54,7 @@ class CourseResult :
 #fetch course
 
     def fetch_roll(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
         cur.execute("select roll from student ")
@@ -69,7 +69,7 @@ class CourseResult :
 #search
 
     def search(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
               cur.execute(f"select name,course from student where roll=?",(self.var_roll.get(),))
@@ -85,7 +85,7 @@ class CourseResult :
 #add function
 
     def add(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
           if self.var_name.get()=="":

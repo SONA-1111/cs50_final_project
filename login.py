@@ -64,7 +64,7 @@ class login_Form :
        else:
 
           try:
-               con=sqlite3.connect(database="cs50_final_project.db")
+               con=sqlite3.connect(database="project.db")
                cur = con.cursor()
 
                # Query to verify user credentials
@@ -88,11 +88,11 @@ class login_Form :
 
     def forget_page(self):
         if self.email_entry.get()=="":
-            messagebox.showerror("Error", "Please enter the email address to reset your password", parent=self.root2)
+            messagebox.showerror("Error", "Please enter the email address to reset your password", parent=self.root)
         else:
             try:
                 
-                con=sqlite3.connect(database="cs50_final_project.db")
+                con=sqlite3.connect(database="project.db")
                 cur = con.cursor()
 
                # Query to verify user credentials
@@ -151,7 +151,7 @@ class login_Form :
             return
 
         try:
-            con=sqlite3.connect(database="cs50_final_project.db")
+            con=sqlite3.connect(database="project.db")
             cur = con.cursor()
 
             # Query to verify user credentials

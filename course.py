@@ -90,7 +90,7 @@ class TotalCourse :
         self.txt_courseName.config(state=NORMAL)
 # delete function
     def delete(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
           if self.var_course.get()=="":
@@ -125,7 +125,7 @@ class TotalCourse :
 
 
     def add(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
           if self.var_course.get()=="":
@@ -152,7 +152,7 @@ class TotalCourse :
 
 
     def update(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
           if self.var_course.get()=="":
@@ -185,7 +185,7 @@ class TotalCourse :
 #show function
 
     def show(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
               cur.execute("select * from course ")
@@ -198,7 +198,7 @@ class TotalCourse :
           messagebox.showerror("Error",f"Error due to {str(ex)}") 
 #search
     def search(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
               cur.execute(f"select * from course where name LIKE '%{self.var_search.get()}%'")

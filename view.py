@@ -48,7 +48,7 @@ class resultView :
 #search
 
     def search(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
               if self.var_search.get()=="":
@@ -83,7 +83,7 @@ class resultView :
 
 # delete function
     def delete(self):
-      con=sqlite3.connect(database="cs50_final_project.db")
+      con=sqlite3.connect(database="project.db")
       cur=con.cursor()
       try:
           if self.var_id=="":

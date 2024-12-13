@@ -95,7 +95,7 @@ class RegistrationForm:
             messagebox.showerror("Error", "Passwords do not match",parent=self.root)
         else:            
             try:
-                con=sqlite3.connect(database="cs50_final_project.db")
+                con=sqlite3.connect(database="project.db")
                 cur=con.cursor()
                 cur.execute("select * from employee where email=?",(self.email_entry.get(),))
                 row=cur.fetchone()
